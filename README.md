@@ -2,12 +2,15 @@
 ## In Progress
 ## Applications
 
-### Appwrite Backend
+
+### This app contains two backends. The first one is in Appwrite, and the second one is in Rust (full-fledged, from scratch) *Learning Purpose*.
+
+### Appwrite backend-0
 - React.js frontend
 - Appwrite as backend service
 - Full authentication and database management
 
-### Rust Backend
+### Rust Backend-1
 - Custom backend built from scratch
 - Performance-focused implementation
 - Full control over infrastructure
@@ -24,11 +27,6 @@
 - Minimal, clean HTML
 - Simple hosting
 
-### 3. Maintenance
-- Google Analytics integration
-- Disqus-style comments
-- Easy moderation
-
 ### 4. Ownership
 - Full content export
 - Raw file access
@@ -41,13 +39,3 @@
 - Appwrite
 - Rust
 
-## Setup
-1. Clone repository
-2. Install dependencies
-3. Configure environment
-4. Run development server
-
-## Roadmap
-- Advanced search
-- Mobile app
-- CI/CD implementation
