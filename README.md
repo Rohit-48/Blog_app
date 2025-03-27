@@ -1,12 +1,53 @@
-# React + Vite
+# MdSupport Blog Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Applications
 
-Currently, two official plugins are available:
+### Appwrite Backend
+- React.js frontend
+- Appwrite as backend service
+- Full authentication and database management
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Rust Backend
+- Custom backend built from scratch
+- Performance-focused implementation
+- Full control over infrastructure
 
-## Expanding the ESLint configuration
+## Ideal Blogging Platform
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Writing
+- Markdown-first
+- Full WYSIWYG (like Typora)
+- Easy image and content management
+
+### 2. Deployment
+- Static site generation (like Jekyll)
+- Minimal, clean HTML
+- Simple hosting
+
+### 3. Maintenance
+- Google Analytics integration
+- Disqus-style comments
+- Easy moderation
+
+### 4. Ownership
+- Full content export
+- Raw file access
+- Platform-independent
+
+## Tech Stack
+- React.js
+- Redux
+- Tailwind CSS
+- Appwrite
+- Rust
+
+## Setup
+1. Clone repository
+2. Install dependencies
+3. Configure environment
+4. Run development server
+
+## Roadmap
+- Advanced search
+- Mobile app
+- CI/CD implementation
