@@ -1,13 +1,13 @@
 // Major configuration of Appwrite
 import conf from "../conf/conf";
 import { Client, Account, ID, Query } from "appwrite";
-
+o
 export class Service {
   client = new Client();
   databases;
   bucket;
   constructor() {
-    this.client
+    this.clientw
       .setEndpoint(conf.appwriteUrl)
       .setProject(conf.appwriteProjectId);
     this.databases = new Databases(this.client);
@@ -64,7 +64,7 @@ export class Service {
     }
   }
 
-  // getPost
+  // getPost checking if the post exists
   async getPost(slug) {
     try {
       return await this.databases.getDocument(
@@ -77,7 +77,8 @@ export class Service {
     }
   }
 
-  // queries
+  // queries which are used to get the posts
+  // only active posts
   async getPosts(queries = [Query.equal("status", "active")]) {
     try {
       return await this.databases.listDocuments(
@@ -90,7 +91,7 @@ export class Service {
     }
   }
 
-  // file upload services
+  // file upload services db 
   async uploadFile(file) {
     try {
       return await this.bucket.createFile(
@@ -114,11 +115,12 @@ export class Service {
     }
   }
 
-  // get file
+  // get file It provides a direct link to preview the uploaded file.
   getFilePreview(fileId) {
     return this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
   }
+
 }
 
-const service = new Service();
-export default service;
+const service = new Service(); // create instance of service (object)
+export default service;  // export the service instance

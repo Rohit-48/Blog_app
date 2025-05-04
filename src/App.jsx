@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true); // Initialize loading state
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,10 +21,12 @@ function App() {
           dispatch(logout());
         }
       })
-      .finally(() => setLoading(false));
-  }, [dispatch]); // Fixed dependency array
+      .finally(() => setLoading(false))   ;
+  }, [dispatch]);
 
-  // Corrected conditional rendering
+  // RENDERING
+  // If loading is true, show a loading state or spinner
+  // If loading is false, show the main content
   return loading ? (
     <div className="min-h-sc flex flex-wrap content-between bg-gray-400">
       <div className="w-full block">
