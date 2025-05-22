@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@milkdown/crepe": "^7.10.5",
+    "@milkdown/kit": "^7.10.5",
+    "@milkdown/react": "^7.10.5",
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.0.17",
     "@tinymce/tinymce-react": "^6.0.0",
