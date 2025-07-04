@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
 import authService from "./appwrite/auth";
-import { login, logout } from "./store/authSlice"; // Assuming you have these action creators
+import { login, logout } from "./store/authSlice";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [loading, setLoading] = useState(true); // Initialize loading state
+  const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,19 +16,26 @@ function App() {
       .getCurrentUser()
       .then((userData) => {
         if (userData) {
-          dispatch(login(userData));
+          dispatch(login({ userData }));
         } else {
           dispatch(logout());
         }
       })
-      .finally(() => setLoading(false))   ;
+      .finally(() => setLoading(false));
   }, [dispatch]);
 
-  // RENDERING
-  // If loading is true, show a loading state or spinner
-  // If loading is false, show the main content
+  // Show loading spinner while checking authentication
   return loading ? (
-    <div className="min-h-sc flex flex-wrap content-between bg-gray-400">
+    <div className="min-h-screen flex flex-wrap content-between bg-gray-50">
+      <div className="w-full flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-500 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Loading...</p>
+        </div>
+      </div>
+    </div>
+  ) : (
+    <div className="min-h-screen flex flex-wrap content-between bg-gray-50">
       <div className="w-full block">
         <Header />
         <main>
@@ -37,7 +44,7 @@ function App() {
         <Footer />
       </div>
     </div>
-  ) : null;
+  );
 }
 
 export default App;
